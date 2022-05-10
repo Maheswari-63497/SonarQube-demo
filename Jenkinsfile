@@ -5,9 +5,9 @@
             agent any
             steps {
               withSonarQubeEnv('SonarQubedefault') {
-                sh 'mvn clean package sonar:sonar'
+                bat 'mvn clean package sonar:sonar'
               }
             }
           }
         }
-      }
+ }
