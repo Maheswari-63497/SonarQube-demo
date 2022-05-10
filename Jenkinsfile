@@ -6,7 +6,7 @@ pipeline{
     stages {
         stage('Quality Gate Status check'){
             steps {
-                   withSonarQubeEnv(credentialsId: 'SonarQube-admin') {
+                    withSonarQubeEvn(installationName:'SonarQubedefault', credentialsId: 'SonarQube-admin') {
                         bat "sonar:sonar"
                     }
                         /*timeout(time:1, unit:'HOURS') {
