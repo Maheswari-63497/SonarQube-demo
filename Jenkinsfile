@@ -34,7 +34,10 @@ pipeline{
                         }
                     }*/
                     bat "mvn clean install"
-                    bat "mvn sonar:sonar"
+                    withSonarQubeEnv("SonarQubedefault"){
+                        bat 'sonar:sonar'
+                    }
+                //    bat "mvn sonar:sonar"
                /* }*/
            }
         }
