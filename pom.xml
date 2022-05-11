@@ -12,6 +12,8 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -37,7 +39,7 @@
   <build>
     <pluginManagement>
       <plugins>
-        <plugin>
+         <!--<plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.7.0</version>
             <configuration>
@@ -45,7 +47,7 @@
               <target>11</target>
             </configuration>
         </plugin>
-       <!--<plugin>
+      <plugin>
           <groupId>org.sonarsource.scanner.maven</groupId>
           <artifactId>sonar-maven-plugin</artifactId>
           <version>3.7.0.1746</version>
