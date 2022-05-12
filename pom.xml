@@ -5,6 +5,7 @@
 
   <groupId>org.sonarqube</groupId>
   <artifactId>sonarscanner-maven-basic</artifactId>
+  <package>war</package>
   <version>1.0-SNAPSHOT</version>
 
   <name>Example of basic Maven project</name>
