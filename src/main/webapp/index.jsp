@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Index Page</title>
+    <title>Index</title>
   </head>
 <body>
 <h2> Hello World!!! </h2>
