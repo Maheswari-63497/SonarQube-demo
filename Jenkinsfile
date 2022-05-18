@@ -1,22 +1,13 @@
 pipeline {
-        agent any
-    stages {
-        stage("Build Stage")
-        {
-            steps
-            {
-                bat 'mvn clean install'
-            }
-        }
-        stage("SonarQube analysis") 
-        {
-            steps
-            {
-                withSonarQubeEnv('SonarQubedefault')
-                {
-                    bat 'mvn sonar:sonar'
-                }
-            }
-        }
+    node {
+  stage('SCM') {
+    checkout scm
+  }
+  stage('SonarQube Analysis') {
+    def mvn = tool 'Default Maven';
+    withSonarQubeEnv() {
+      sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=org.sonarqube:sonarscanner-maven-basic"
     }
+  }
+}
 }
