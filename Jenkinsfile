@@ -8,7 +8,7 @@ pipeline {
                 bat 'mvn clean install'
             }
         }
-       /* stage("SonarQube analysis") 
+        stage("SonarQube analysis") 
         {
             steps
             {
@@ -24,6 +24,6 @@ pipeline {
                     deploy adapters: [tomcat9(credentialsId: 'ApacheTomcatadmin', path: '', url: 'http://localhost:5000/')], contextPath: null, war: 'target/*.war'
                 }
             }
-        }*/
+        }
     }
 }
