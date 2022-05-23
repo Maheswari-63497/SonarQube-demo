@@ -4,7 +4,7 @@
 <web-app>
   <display-name>demo java web app and sonarqube</display-name>
   <welcome-file-list>
-    <welcome-file>index_1.jsp</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 
   <servlet>
